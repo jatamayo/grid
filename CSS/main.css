@@ -1,0 +1,9 @@
+/*  Import CSS styles  */
+@import url("card_style.css");
+
+/* Body Style */
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
