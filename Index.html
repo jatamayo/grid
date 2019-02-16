@@ -14,22 +14,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<body ng-app="myApp" style="background-color: gray;">
+<body ng-app="myApp">
     <!--  Grid container -->
-    <br><br><br><br><br><br><br><br><br><br>
     <div ng-controller="myCtrl">
         <div class="container">
             <div class="row">
-                <div class="col-md-3" ng-repeat="item in options">
+                <div class="col-md-4 col-lg-3 " ng-repeat="item in options" style="    text-shadow: 14px 4px 2px 2px red;
+                ">
                     <!--  -->
                     <article class="card">
                         <header class="card__thumb">
-                            <a  href="#">
-                                <img class="card_image" src="{{item.Image}}">
-                            </a>
+                            <div>
+                                <div class="card__heart__icon" onclick="changeColor()"><span id="color__icon" class="glyphicon glyphicon-heart-empty"></span></div>
+                                <div><img class="card_image" src="{{item.Image}}"></div> 
+                            </div>
                         </header>
                         <div class="card__body">
-                            <div class="card__category"><a href="#"></a></div>
+                            <div class="card__category"></div>
                             <div class="card__title"><span class="over__color">{{item.Title}}</span></div>
                             <div class="card__subtitle"><span>{{item.Subtitle}}</span></div>
                             <p class="card__description"><span>{{item.Description}}</span></p>

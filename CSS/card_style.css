@@ -5,62 +5,54 @@
   }
   
   .card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-      width: 250px;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
+    width: 250px;
     background: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    -webkit-transition: box-shadow 0.3s;
-            transition: box-shadow 0.3s;
+    margin: auto;
+    -webkit-box-shadow: 10px 10px 33px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 33px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 33px -7px rgba(0,0,0,0.75);
+    border-radius: 5px;
   }
-  .card:hover {
-    box-shadow: 0 0 50px rgba(5, 2, 2, 0.3);
-  }
-  
-  .card a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .card__date {
-    background: black;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 45px;
-    height: 75px;
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    line-height: 13px;
-    font-weight: bold;
-    padding-top: 10px;
-  }
-  
-  .card__body:hover > .over__color{
-    color:red;
-    background-color: blue;
+  body{
+    background-color: red;
   }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 960px) {
+  .card{
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+} 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 961px) {
+  .card{
+    margin-top: 50%;
+  }
+} 
+
+
+.card__heart__icon{
+  display: block;
+  position: absolute;
+  color:red;
+}
+.glyphicon-heart-empty{
+  color: white;
+  font-size: 30px;
+  margin: 10px 0px 0px 10px;
+}
   .card__thumb {
     height: 200px;
     overflow: hidden;
-    background-color: #000;
     -webkit-transition: height 0.3s;
-    transition: height 0.3s;
+    border-radius: 5px;
+     
   }
   .card__thumb img {
-    display: block;
     opacity: 1;
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-    transition: opacity 0.3s, transform 0.3s;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+   
   }
   .card_image{
     display: block;
@@ -70,12 +62,10 @@
   }
   .card:hover .card__thumb img {
   opacity: 0.6; 
-    -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
   }
   .card:hover .card__thumb {
     height: 70px;
+    border-radius: 15px 15px 0px 0px;
   }
   
   .card__body {
@@ -83,29 +73,12 @@
     padding: 20px;
     height: 75px;
     -webkit-transition: height 0.3s;
-            transition: height 0.3s;
+    transition: height 0.3s;
   }
   .card:hover .card__body {
     height: 200px;
   }
   
-  
-  .card__category {
-    position: absolute;
-    top: -25px;
-    left: 0;
-    height: 25px;
-    padding: 0 15px;
-    background: #08c;
-    color: #fff;
-    font-size: 11px;
-    line-height: 25px;
-  }
-  .card__category a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
   .card__icons{
     position: absolute;
     top: -25px;
@@ -140,10 +113,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  
   .card__description {
+    visibility: hidden;
     overflow: hidden;
-    display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     width: 230px;
@@ -161,10 +133,10 @@
   .card:hover .card__description {
     opacity: 1;
     -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
+    transition-delay: 0.2s;
+    -ms-transform: translateY(0);
+    transform: translateY();
+    visibility: initial;
   }
   .card:hover .card__title {
     color:#8225cf;
@@ -179,4 +151,6 @@
     border: solid;
     border-color: #8225cf;
     background-color:#FDF7FF;
+    border-width: 5px;
+    border-radius: 20px;
   }
