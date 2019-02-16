@@ -20,7 +20,7 @@
     <div ng-controller="myCtrl">
         <div class="container">
             <div class="row">
-                <div class="col-md-4" ng-repeat="item in options">
+                <div class="col-md-3" ng-repeat="item in options">
                     <!--  -->
                     <article class="card">
                         <header class="card__thumb">
@@ -30,9 +30,15 @@
                         </header>
                         <div class="card__body">
                             <div class="card__category"><a href="#"></a></div>
-                            <div class="card__title"><h1>{{item.Title}}</h1></div>
-                            <div class="card__subtitle">{{item.Subtitle}}</div>
-                            <p class="card__description">{{item.Description}}</p>
+                            <div class="card__title"><span class="over__color">{{item.Title}}</span></div>
+                            <div class="card__subtitle"><span>{{item.Subtitle}}</span></div>
+                            <p class="card__description"><span>{{item.Description}}</span></p>
+                            <div class="card__icons">
+                                <p class="glyphicon glyphicon-usd"><span class="card__icon__item">{{item.Price}}</span></p>
+                                <p class="glyphicon glyphicon-home"><span class="card__icon__item">{{item.Size}}</span></p>
+                                <p class="glyphicon glyphicon-tint"><span class="card__icon__item">{{item.Bathroom}}</span></p>
+                                <p class="glyphicon glyphicon-road"><span class="card__icon__item">{{item.Parking}}</span></p>
+                            </div>
                         </div>
                     </article>
                     <!--  -->
