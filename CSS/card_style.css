@@ -25,7 +25,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 961px) {
   .card{
-    margin-top: 50%;
+    margin-top: 60%;
   }
 } 
 
@@ -97,6 +97,7 @@
   }
   .card:hover .card__button{
     margin-top: 120px;
+
   }
   
   .card__icons{
@@ -156,10 +157,6 @@
   }
   .card:hover .card__description {
     opacity: 1;
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-    -ms-transform: translateY(0);
-    transform: translateY();
     visibility: initial;
     margin-top: -70px;
   }
@@ -179,3 +176,41 @@
     border-width: 5px;
     border-radius: 20px;
   }
+
+
+  /*-----------------*/
+  .fadein {
+    position:absolute;
+}
+.fadein img {
+    width: 250px;
+    position:absolute;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#f2 {
+    -webkit-animation-delay: -4s;
+}
+#f3 {
+    -webkit-animation-delay: -2s;
+}
