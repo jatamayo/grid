@@ -25,15 +25,19 @@
                     <article class="card">
                         <header class="card__thumb">
                             <div>
-                                <div class="card__heart__icon" onclick="changeColor()"><span id="color__icon" class="glyphicon glyphicon-heart-empty"></span></div>
+                                <div class="card__heart__icon"><span class="glyphicon glyphicon-heart-empty"></span></div>
                                 <div><img class="card_image" src="{{item.Image}}"></div> 
                             </div>
                         </header>
                         <div class="card__body">
                             <div class="card__category"></div>
                             <div class="card__title"><span class="over__color">{{item.Title}}</span></div>
-                            <div class="card__subtitle"><span>{{item.Subtitle}}</span></div>
+                            <div class="card__subtitle"><span>Q. {{item.Price}}/mes</span></div>
                             <p class="card__description"><span>{{item.Description}}</span></p>
+                            <div id="parent">
+                                    <span type="button" class="btn card__button">Renta</span>
+                                    <span type="button" class="btn card__button">Informacion</span>
+                                  </div>
                             <div class="card__icons">
                                 <p class="glyphicon glyphicon-usd"><span class="card__icon__item">{{item.Price}}</span></p>
                                 <p class="glyphicon glyphicon-home"><span class="card__icon__item">{{item.Size}}</span></p>
