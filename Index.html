@@ -19,36 +19,39 @@
     <div ng-controller="myCtrl">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-lg-3 " ng-repeat="item in options" style="    text-shadow: 14px 4px 2px 2px red;
-                ">
-                    <!--  -->
+                <div class="col-md-4 overExample" ng-repeat="item in options">
+                    <!-- Main card container -->
                     <article class="card">
-                        <header class="card__thumb">
-                            <div>
-                                <div class="card__heart__icon"><span class="glyphicon glyphicon-heart-empty"></span></div>
-                                <div class="fadein">
-                                    <img class="card__image" id="f3" src="Images/image1.jpg">
-                                    <img class="card__image" id="f2" src="Images/image2.jpg">
-                                    <img class="card__image" id="f1" src="Images/image3.jpg">
-                                </div> 
-                            </div>
-                        </header>
-                        <div class="card__body">
-                            <div class="card__category"></div>
-                            <div class="card__title"><span class="over__color">{{item.Title}}</span></div>
-                            <div class="card__subtitle"><span>Q. {{item.Price}}/mes</span></div>
-                            <p class="card__description"><span>{{item.Description}}</span></p>
-                            <div id="parent">
-                                    <span type="button" class="btn card__button">Renta</span>
-                                    <span type="button" class="btn card__button">Informacion</span>
-                                  </div>
-                            <div class="card__icons">
-                                <p class="glyphicon glyphicon-usd"><span class="card__icon__item">{{item.Price}}</span></p>
-                                <p class="glyphicon glyphicon-home"><span class="card__icon__item">{{item.Size}}</span></p>
-                                <p class="glyphicon glyphicon-tint"><span class="card__icon__item">{{item.Bathroom}}</span></p>
-                                <p class="glyphicon glyphicon-road"><span class="card__icon__item">{{item.Parking}}</span></p>
-                            </div>
+                       <!-- card images -->
+                       <div class="card__image__container">
+                           <div class="fadein">
+                                <img id="f3" class="card__image" src="Images/image1.jpg" alt="Snow">
+                                <img id="f2" class="card__image" src="Images/image2.jpg" alt="Snow">
+                                <img id="f1" class="card__image" src="Images/image3.jpg" alt="Snow"> 
+                           </div>
+                           <div class="card__heart__icon"><span class="glyphicon glyphicon-heart-empty"></span></div>
+                           <div class="card__photo__icon"><span class="glyphicon glyphicon-picture"><b class="card__photo__number"> {{item.NoPictures}}-Fotos</b></span></div>
                         </div>
+                        <div class="card__body">
+                            <!-- Card Category -->
+                            <div class="card__category">
+                                <span class="glyphicon glyphicon-road"><b class="item__info">{{item.Parking}}</b></span>
+                                <span class="glyphicon glyphicon glyphicon-bed"><b class="item__info">{{item.Room}}</b></span>
+                                <span class="glyphicon glyphicon glyphicon-tint"><b class="item__info">{{item.Bathroom}}</b></span>
+                            </div>
+                            <!-- Card body -->
+                            <div class="card__title"><h2>{{item.Title}}</h2></div>
+                            <!-- Card Subtitle -->
+                            <div class="card__subtitle"><h4>Q.{{item.Price}}/mes</h4></div>
+                            <!-- Card Description -->
+                            <div><p class="card__description">{{item.Description}}</p></div>
+                            
+                        </div>
+                        <!--  Card Buttons -->
+                        <div class="card__button__container">
+                            <button type="button" class="card__buttons btn-ligth">Renta</button>
+                            <button type="button" class="card__buttons btn-ligth">Apartamento</button>
+                        </div> <br>
                     </article>
                     <!--  -->
                 </div>                
