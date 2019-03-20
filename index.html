@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jatamayo</title>
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css">
+    <script src="JS/main.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <!--  Grid container -->
+    <div ng-controller="myCtrl">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 overExample" ng-repeat="item in options">
+                    <!-- Main card container -->
+                    <article class="card">
+                       <!-- card images -->
+                       <div class="card__image__container">
+                           <div class="fadein">
+                                <img id="f3" class="card__image" src="Images/image1.jpg" alt="Snow">
+                                <img id="f2" class="card__image" src="Images/image2.jpg" alt="Snow">
+                                <img id="f1" class="card__image" src="Images/image3.jpg" alt="Snow"> 
+                           </div>
+                           <div class="card__heart__icon"><span class="glyphicon glyphicon-heart-empty"></span></div>
+                           <div class="card__photo__icon"><span class="glyphicon glyphicon-picture"><b class="card__photo__number"> {{item.NoPictures}}-Fotos</b></span></div>
+                        </div>
+                        <div class="card__body">
+                            <!-- Card Category -->
+                            <div class="card__category">
+                                <span class="glyphicon glyphicon-road"><b class="item__info">{{item.Parking}}</b></span>
+                                <span class="glyphicon glyphicon glyphicon-bed"><b class="item__info">{{item.Room}}</b></span>
+                                <span class="glyphicon glyphicon glyphicon-tint"><b class="item__info">{{item.Bathroom}}</b></span>
+                            </div>
+                            <!-- Card body -->
+                            <div class="card__title"><h2>{{item.Title}}</h2></div>
+                            <!-- Card Subtitle -->
+                            <div class="card__subtitle"><h4>Q.{{item.Price}}/mes</h4></div>
+                            <!-- Card Description -->
+                            <div><p class="card__description">{{item.Description}}</p></div>
+                            
+                        </div>
+                        <!--  Card Buttons -->
+                        <div class="card__button__container">
+                            <button type="button" class="card__buttons btn-ligth">Renta</button>
+                            <button type="button" class="card__buttons btn-ligth">Apartamento</button>
+                        </div> <br>
+                    </article>
+                    <!--  -->
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
